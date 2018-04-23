@@ -72,7 +72,14 @@ public class PlanetaController {
 	
 	@RequestMapping(method = RequestMethod.DELETE, value = "/remover/{id}")
 	public ResponseEntity<Response<Integer>> remover(@PathVariable(name = "id") String id) {
-		this.service.remover(id);
-		return ResponseEntity.ok(new Response<Integer>(1));
+		
+		Planeta planetaEncontrado = this.service.buscarPorID(id);
+		
+		if (planetaEncontrado == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else {
+			this.service.remover(id);
+			return ResponseEntity.ok(new Response<Integer>(1));
+		}
 	}
 }

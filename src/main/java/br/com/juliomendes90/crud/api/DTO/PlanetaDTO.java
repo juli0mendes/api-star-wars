@@ -2,6 +2,9 @@ package br.com.juliomendes90.crud.api.DTO;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PlanetaDTO {
 
 	private String name;
@@ -23,7 +26,7 @@ public class PlanetaDTO {
 	private String population;
     
 	private List<String> residents;
-    
+
 	private List<String> films;
     
 	private String created;
