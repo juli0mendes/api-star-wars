@@ -34,12 +34,30 @@ public class PlanetaController {
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/buscarPorId/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Response<Planeta>> buscarPorId(@PathVariable(name = "id") String id) {
-		return ResponseEntity.ok(new Response<Planeta>(this.service.buscarPorID(id)));
+		
+		
+		Planeta planetaEncontrado = this.service.buscarPorID(id);
+		
+		if (planetaEncontrado == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else {
+			return ResponseEntity.ok(new Response<Planeta>(planetaEncontrado));
+		}
+		
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value = "/buscarPorNome/{nome}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Response<List<Planeta>>> buscarPorNome(@PathVariable(name = "nome") String nome) {
-		return ResponseEntity.ok(new Response<List<Planeta>>(this.service.buscarPorNome(nome)));
+	public ResponseEntity<Response<Planeta>> buscarPorNome(@PathVariable(name = "nome") String nome) {
+		
+		Planeta planetaEncontrado = this.service.buscarPorNome(nome);
+		
+		if (planetaEncontrado == null) {
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		} else {
+			return ResponseEntity.ok(new Response<Planeta>(planetaEncontrado));
+		}
+		
+		
 	}
 	
 	@RequestMapping(method = RequestMethod.POST, value = "/cadastrar", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

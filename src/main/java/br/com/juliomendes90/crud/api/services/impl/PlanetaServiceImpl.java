@@ -42,15 +42,17 @@ public class PlanetaServiceImpl implements PlanetaService {
 	@Override
 	public Planeta buscarPorID(String id) {
 		Planeta p = this.repository.findOne(id);
-		p.setQuantAparicoesEmFilmes(this.getQtdFilmes(p));
+		
+		if (p != null) {
+			p.setQuantAparicoesEmFilmes(this.getQtdFilmes(p));
+		}
 		
 		return p;
 	}
 
 	@Override
-	public List<Planeta> buscarPorNome(String nome) {
-		// TODO implementar no repository
-		return null;
+	public Planeta buscarPorNome(String nome) {
+		return this.repository.findOneBynome(nome);
 	}
 
 	@Override

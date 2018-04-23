@@ -10,7 +10,7 @@ public interface PlanetaService {
 	
 	Planeta buscarPorID(String id);
 	
-	List<Planeta> buscarPorNome(String nome);
+	Planeta buscarPorNome(String nome);
 	
 	Planeta cadastrar(Planeta planeta);
 	

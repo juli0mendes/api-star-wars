@@ -8,4 +8,6 @@ import br.com.juliomendes90.crud.api.documents.Planeta;
 @Repository
 public interface PlanetaRepository extends MongoRepository<Planeta, String> {
 
+	public Planeta findOneBynome(String nome);
+	
 }
