@@ -2,6 +2,11 @@ package br.com.juliomendes90.crud.api.responses;
 
 import java.util.List;
 
+/**
+ * @author Julio Mendes
+ * @version 1.0 (22/04/2018)
+ *
+ */
 public class Response<T> {
 
 	private T data;

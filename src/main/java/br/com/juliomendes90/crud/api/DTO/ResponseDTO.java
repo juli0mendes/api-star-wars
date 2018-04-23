@@ -1,7 +1,12 @@
-package br.com.juliomendes90.crud.api.DTO;
+package br.com.juliomendes90.crud.api.dto;
 
 import java.util.List;
 
+/**
+ * @author Julio Mendes
+ * @version 1.0 (22/04/2018)
+ *
+ */
 public class ResponseDTO {
 
 	private Integer count;

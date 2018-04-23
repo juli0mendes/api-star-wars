@@ -15,12 +15,17 @@ import org.springframework.web.client.RestTemplate;
 import com.google.gson.Gson;
 
 import br.com.juliomendes90.crud.api.Constantes.Constantes;
-import br.com.juliomendes90.crud.api.DTO.ResponseDTO;
-import br.com.juliomendes90.crud.api.DTO.ResponsePlanetaDTO;
 import br.com.juliomendes90.crud.api.documents.Planeta;
+import br.com.juliomendes90.crud.api.dto.ResponseDTO;
+import br.com.juliomendes90.crud.api.dto.ResponsePlanetaDTO;
 import br.com.juliomendes90.crud.api.repositories.PlanetaRepository;
 import br.com.juliomendes90.crud.api.services.PlanetaService;
 
+/**
+ * @author Julio Mendes
+ * @version 1.0 (22/04/2018)
+ *
+ */
 @Service
 public class PlanetaServiceImpl implements PlanetaService {
 

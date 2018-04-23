@@ -4,6 +4,11 @@ import java.util.List;
 
 import br.com.juliomendes90.crud.api.documents.Planeta;
 
+/**
+ * @author Julio Mendes
+ * @version 1.0 (22/04/2018)
+ *
+ */
 public interface PlanetaService {
 
 	List<Planeta> buscarTodos();

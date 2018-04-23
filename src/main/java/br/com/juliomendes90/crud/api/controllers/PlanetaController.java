@@ -20,6 +20,11 @@ import br.com.juliomendes90.crud.api.documents.Planeta;
 import br.com.juliomendes90.crud.api.responses.Response;
 import br.com.juliomendes90.crud.api.services.PlanetaService;
 
+/**
+ * @author Julio Mendes
+ * @version 1.0 (22/04/2018)
+ *
+ */
 @RestController
 @RequestMapping(path = "api/planetas")
 public class PlanetaController {

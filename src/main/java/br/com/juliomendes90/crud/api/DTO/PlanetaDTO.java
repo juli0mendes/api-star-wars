@@ -1,9 +1,14 @@
-package br.com.juliomendes90.crud.api.DTO;
+package br.com.juliomendes90.crud.api.dto;
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * @author Julio Mendes
+ * @version 1.0 (22/04/2018)
+ *
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class PlanetaDTO {
 
